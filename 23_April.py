@@ -14,24 +14,25 @@ class Team:
     def getMinRuns(self,playerList):
         self.playerList = playerList
         minRuns = self.playerList[0].noOfRuns
-        minRunsPlayer = self.playerList[0]
+        minRunsPlayer = 0
         for player in self.playerList:
             
             if player.noOfRuns<minRuns:
                 minRuns = player.noOfRuns
                 minRunsPlayer = player
-        return player        
+        return minRunsPlayer        
         
     def getMaxWickets(self,playerList):
         self.playerList = playerList
         maxWickets = 0
+        maxWicketsPlayer = 0
         for player in self.playerList:
             
             if player.noOfWickets>maxWickets:
                 maxWickets = player.noOfWickets
                 maxWicketsPlayer = player
                 
-        return player        
+        return maxWicketsPlayer        
 
 if __name__ == '__main__':
     noOfPlayer = int(input("Enter Number of players:"))
